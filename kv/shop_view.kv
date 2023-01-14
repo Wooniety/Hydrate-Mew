@@ -27,12 +27,11 @@
 			pos_hint: {'center_x': 0.5, 'center_y': 0.45}
 			on_press: root.manager.current = 'toys'
 		Button:
-			id:toys_button
 			text: "Back"
-			size: 100, 120
+			size: 90, 70
     		size_hint: None, None
-			pos_hint: {'center_x': 0.1, 'center_y': 0.1}
-			on_press: root.manager.current = 'shop'
+			pos_hint: {'center_x': 0.085, 'center_y': 0.04}
+			on_press: root.manager.current = 'catview'
 
 				
 <FoodView>:
@@ -77,6 +76,12 @@
                 source: './game/resources/collar.jpg'
 				x: self.parent.x + 10
                 center_y: self.parent.center_y
+		Button:
+			text: "Back"
+			size: 90, 70
+    		size_hint: None, None
+			pos_hint: {'center_x': 0.085, 'center_y': 0.04}
+			on_press: root.manager.current = 'shop'
 
 <ToysView>:
     FloatLayout:
@@ -125,6 +130,13 @@
                 source: './game/resources/toy_rat.png'
 				x: self.parent.x + 10
                 center_y: self.parent.center_y
+		Button:
+			text: "Back"
+			size: 90, 70
+    		size_hint: None, None
+			pos_hint: {'center_x': 0.085, 'center_y': 0.04}
+			background_color: "#e69825"
+			on_press: root.manager.current = 'shop'
 				
 
                 
