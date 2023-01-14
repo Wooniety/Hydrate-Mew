@@ -3,6 +3,7 @@ from game.shop_view import ShopView
 
 import os
 
+from kivy.config import Config
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager
 from kivy.lang import Builder
@@ -21,6 +22,7 @@ class CatApp(App):
         sm.add_widget(shop_view_screen)
         return sm
     
+
 def load_kv_files():
     kv_catview = os.path.join(os.path.dirname(__file__), 'kv/cat_view.kv')
     Builder.load_file(kv_catview)
