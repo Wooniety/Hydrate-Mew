@@ -1,4 +1,5 @@
 from game.cat_view import CatView
+from game.food_view import FoodView
 from game.shop_view import ShopView
 
 import os
@@ -19,9 +20,11 @@ class CatApp(App):
     def screen_manager(self):
         cat_view_screen = CatView(name='catview')
         shop_view_screen = ShopView(name='shop')
-
+        food_view_screen = FoodView(name='food')
+        
         self.root.add_widget(cat_view_screen)
         self.root.add_widget(shop_view_screen)
+        self.root.add_widget(food_view_screen)
 
     def _set_aspect_ratio(self):
         Config.set('graphics', 'width', '480')
