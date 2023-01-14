@@ -1,5 +1,7 @@
 from game.cat_view import CatView
 from game.shop_view import ShopView, FoodView
+from game.profile import Profile
+from game.water_view import WaterView
 
 import os
 
