@@ -22,10 +22,11 @@ class CatApp(App):
         return sm
     
 def load_kv_files():
-    kv_main = os.path.join(os.path.dirname(__file__), 'kv\cat_view.kv')
-    Builder.load_file(kv_main)
-    kv_game = os.path.join(os.path.dirname(__file__), 'shop_view.kv')
-    Builder.load_file(kv_game)
+    kv_catview = os.path.join(os.path.dirname(__file__), 'kv/cat_view.kv')
+    Builder.load_file(kv_catview)
+    kv_shopview = os.path.join(os.path.dirname(__file__), 'kv/shop_view.kv')
+    Builder.load_file(kv_shopview)
 
 if __name__ == '__main__':
+    load_kv_files()
     CatApp().run()
