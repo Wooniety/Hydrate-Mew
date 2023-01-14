@@ -26,6 +26,13 @@
     		size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.45}
 			on_press: root.manager.current = 'toys'
+		Button:
+			id:toys_button
+			text: "Back"
+			size: 100, 120
+    		size_hint: None, None
+			pos_hint: {'center_x': 0.1, 'center_y': 0.1}
+			on_press: root.manager.current = 'shop'
 
 				
 <FoodView>:
@@ -77,10 +84,11 @@
 	#background
         canvas.before:
         Image:
-            source: "./game/resources/backgroundblue.png"
+            source: "./game/resources/backgroundorange.png"
             pos: self.pos
             size: self.size
-        
+    
+	#cardboard orange
 		Label:
 			text: 'Furrtastic Toys'
 			font_size: 30
@@ -92,7 +100,7 @@
     		size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.6}
             Image:
-                source: './game/resources/collar.jpg'
+                source: './game/resources/toy_ball.png'
 				x: self.parent.x + 10
                 center_y: self.parent.center_y
 		Button:
@@ -101,7 +109,7 @@
     		size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.45}
             Image:
-                source: './game/resources/collar.jpg'
+                source: './game/resources/toy_box.png'
 				x: self.parent.x + 10
                 center_y: self.parent.center_y
 		Button:
@@ -110,7 +118,7 @@
     		size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.30}
             Image:
-                source: './game/resources/collar.jpg'
+                source: './game/resources/toy_rat.png'
 				x: self.parent.x + 10
                 center_y: self.parent.center_y
 				
