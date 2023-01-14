@@ -1,10 +1,24 @@
 <CatView>:
     FloatLayout:
+        #background
+        canvas.before:
+        Image:
+            source: "./game/resources/background.png"
+            pos: self.pos
+            size: self.size
+
         Label:
             text: 'This is Cat Game'
             font_size: 30
             size_hint: None, None
+            pos_hint: {'center_x': 0.5, 'center_y': 0.9}
+            
+        Image:
+            source: "./game/resources/cathappy.jpg"
+            size_hint: 1, 1
             pos_hint: {'center_x': 0.5, 'center_y': 0.7}
+
+        #buttons
         Button:
             id:shop_button
             font_size: 20
