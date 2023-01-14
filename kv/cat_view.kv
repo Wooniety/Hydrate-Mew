@@ -9,18 +9,37 @@
             id:shop_button
             font_size: 20
             size_hint: None, None
-<<<<<<< HEAD
-<<<<<<< HEAD
-            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-            size_hint: 0.3, 0.3
-=======
-            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
->>>>>>> cdecb79b4343212a42bcf4da34bfd4585888e1cf
-=======
-            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
->>>>>>> cdecb79b4343212a42bcf4da34bfd4585888e1cf
+            pos_hint: {'x': 0.1, 'y': 0.15}
+
             on_press: root.manager.current = 'shop'
             Image:
                 source: "./game/resources/shop.png"
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
+
+        Button:
+            id:cat_button
+            font_size: 20
+            size_hint: None, None
+            pos_hint: {'x': 0.4, 'y': 0.15}
+
+            on_press: root.manager.current = 'cat'
+            Image:
+                source: "./game/resources/collar.jpg"
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        Button:
+            id:goal_button
+            font_size: 20
+            size_hint: None, None
+            pos_hint: {'x': 0.7, 'y': 0.15}
+
+            on_press: root.manager.current = 'goal'
+            Image:
+                source: "./game/resources/calendar.jpg"
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+
+
