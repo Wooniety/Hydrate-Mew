@@ -1,7 +1,7 @@
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.graphics import Color, Ellipse
 
-class GameScreen(Screen):
+class ShopView(Screen):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         with self.canvas:
