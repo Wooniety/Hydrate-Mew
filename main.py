@@ -9,15 +9,23 @@ from kivy.config import Config
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager
 from kivy.lang import Builder
+from kivy.core.audio import SoundLoader
 
 class CatApp(App):
     def build(self):
         self._set_aspect_ratio()
-        self.root = ScreenManager()
+        self.bg_music()
 
+        self.root = ScreenManager()
         self.screen_manager()
         return self.root
     
+    def bg_music(self):
+        bgm_track = os.path.join(os.path.dirname(__file__), 'resources/bgm.mp3')
+        self.sound = SoundLoader.load(bgm_track)
+        self.sound.loop = True
+        self.sound.play()
+
     def screen_manager(self):
         cat_view_screen = CatView(name='catview')
         shop_view_screen = ShopView(name='shop')
