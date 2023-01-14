@@ -33,13 +33,13 @@
                 center_y: self.parent.center_y
 
         Button:
-            id:cat_button
+            id:setting_button
             font_size: 20
             background_color: 0,0,0,0
             size_hint: None, None
             pos_hint: {'x': 0.4, 'y': 0.15}
 
-            on_press: root.manager.current = 'cat'
+            on_press: root.manager.current = 'setting'
             Image:
                 source: "./game/resources/collar.png"
                 center_x: self.parent.center_x
