@@ -11,18 +11,19 @@
             text: 'This is Cat Game'
             font_size: 30
             size_hint: None, None
-            pos_hint: {'center_x': 0.5, 'center_y': 0.9}
+            pos_hint: {'center_x': 0.5, 'center_y': 0.92}
             
         Image:
             source: "./game/resources/cathappy.jpg"
             size_hint: 1, 1
-            pos_hint: {'center_x': 0.5, 'center_y': 0.7}
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
 
         #buttons
         Button:
             id:shop_button
             font_size: 20
             size_hint: None, None
+            background_color: 0,0,0,0
             pos_hint: {'x': 0.1, 'y': 0.15}
 
             on_press: root.manager.current = 'shop'
@@ -34,24 +35,26 @@
         Button:
             id:cat_button
             font_size: 20
+            background_color: 0,0,0,0
             size_hint: None, None
             pos_hint: {'x': 0.4, 'y': 0.15}
 
             on_press: root.manager.current = 'cat'
             Image:
-                source: "./game/resources/collar.jpg"
+                source: "./game/resources/collar.png"
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
 
         Button:
             id:goal_button
             font_size: 20
+            background_color: 0,0,0,0
             size_hint: None, None
             pos_hint: {'x': 0.7, 'y': 0.15}
 
             on_press: root.manager.current = 'goal'
             Image:
-                source: "./game/resources/calendar.jpg"
+                source: "./game/resources/calendar.png"
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
 
