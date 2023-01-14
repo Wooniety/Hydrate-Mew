@@ -1,5 +1,7 @@
 from game.cat_view import CatView
-from game.shop_view import ShopView
+from game.shop_view import ShopView, FoodView
+from game.water_view import WaterView
+from game.profile import Profile
 
 import os
 
@@ -19,9 +21,15 @@ class CatApp(App):
     def screen_manager(self):
         cat_view_screen = CatView(name='catview')
         shop_view_screen = ShopView(name='shop')
+        water_view_screen = WaterView(name='water')
+        profile_view_screen = Profile(name='profile')
+        food_fiew_screen = FoodView(name='food')
 
         self.root.add_widget(cat_view_screen)
         self.root.add_widget(shop_view_screen)
+        self.root.add_widget(water_view_screen)
+        self.root.add_widget(profile_view_screen)
+        self.root.add_widget(food_fiew_screen)
 
     def _set_aspect_ratio(self):
         Config.set('graphics', 'width', '480')
@@ -34,6 +42,8 @@ def load_kv_files():
     Builder.load_file(kv_catview)
     kv_shopview = os.path.join(os.path.dirname(__file__), 'kv/shop_view.kv')
     Builder.load_file(kv_shopview)
+    kv_profile = os.path.join(os.path.dirname(__file__), 'kv/profile.kv')
+    Builder.load_file(kv_profile)
 
 if __name__ == '__main__':
     load_kv_files()
