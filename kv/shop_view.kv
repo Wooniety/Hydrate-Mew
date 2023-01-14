@@ -1,4 +1,11 @@
 <ShopView>:
+	canvas.before:
+		Color:
+			rgba: (1,1,1,1)
+		Rectangle:
+			pos: self.pos
+			size: self.size
+		
 	BoxLayout:
 		orientation: "vertical"
 		Label:
@@ -6,13 +13,50 @@
 			font_size: 30
 			size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.7}
-		Button: 
+			color: (0,0,0)
+		Button:
+			id:food_button
 			text: "Food"
+			on_press: root.manager.current = 'food'
 		Button:
+			id:toys_button
 			text: "Toys"
+			on_press: root.manager.current = 'toys'
 		Button:
+			id:furniture_button
 			text: "Furniture"
+			on_press: root.manager.current = 'furniture'
 				
+<FoodView>:
+    FloatLayout:
+	
+        orientation: "vertical"
+		Label:
+			text: 'Pawsome Bites'
+			font_size: 30
+			size_hint: None, None
+			pos_hint: {'center_x': 0.5, 'center_y': 0.85}
+        Button:
+            text: "Tuna Temptations"
+			size: 400, 120
+    		size_hint: None, None
+			pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+            Image:
+                source: './game/resources/collar.jpg'
+				x: self.parent.x + 10
+                center_y: self.parent.center_y
+		Button:
+            text: "Kitty Kibbles"
+			size: 400, 120
+    		size_hint: None, None
+			pos_hint: {'center_x': 0.5, 'center_y': 0.45}
+            Image:
+                source: './game/resources/collar.jpg'
+				x: self.parent.x + 10
+                center_y: self.parent.center_y
+                
+
+
 
 
 

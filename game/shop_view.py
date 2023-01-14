@@ -6,5 +6,8 @@ class ShopView(Screen):
         super().__init__(**kwargs)
         pass
 
-
+class FoodView(Screen):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        pass
 
