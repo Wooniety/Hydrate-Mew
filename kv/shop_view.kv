@@ -1,36 +1,50 @@
-<ShopView>:
-	canvas.before:
-		Color:
-			rgba: (1,1,1,1)
-		Rectangle:
-			pos: self.pos
-			size: self.size
-		
-	BoxLayout:
+<ShopView>:	
+	FloatLayout:
 		orientation: "vertical"
+		#background
+		canvas.before:
+        Image:
+            source: "./game/resources/backgroundorange.png"
+            pos: self.pos
+            size: self.size
 		Label:
 			text: 'Welcome to the Shop'
 			font_size: 30
 			size_hint: None, None
-			pos_hint: {'center_x': 0.5, 'center_y': 0.7}
-			color: (0,0,0)
+			pos_hint: {'center_x': 0.5, 'center_y': 0.85}
 		Button:
 			id:food_button
 			text: "Food"
+			size: 400, 120
+    		size_hint: None, None
+			pos_hint: {'center_x': 0.5, 'center_y': 0.6}
 			on_press: root.manager.current = 'food'
 		Button:
 			id:toys_button
 			text: "Toys"
+			size: 400, 120
+    		size_hint: None, None
+			pos_hint: {'center_x': 0.5, 'center_y': 0.45}
 			on_press: root.manager.current = 'toys'
 		Button:
-			id:furniture_button
-			text: "Furniture"
-			on_press: root.manager.current = 'furniture'
+			id:toys_button
+			text: "Back"
+			size: 100, 120
+    		size_hint: None, None
+			pos_hint: {'center_x': 0.1, 'center_y': 0.1}
+			on_press: root.manager.current = 'shop'
+
 				
 <FoodView>:
     FloatLayout:
-	
-        orientation: "vertical"
+		orientation: "vertical"
+	#background
+        canvas.before:
+        Image:
+            source: "./game/resources/backgroundblue.png"
+            pos: self.pos
+            size: self.size
+        
 		Label:
 			text: 'Pawsome Bites'
 			font_size: 30
@@ -54,6 +68,65 @@
                 source: './game/resources/collar.jpg'
 				x: self.parent.x + 10
                 center_y: self.parent.center_y
+		Button:
+            text: "Feline Fizz"
+			size: 400, 120
+    		size_hint: None, None
+			pos_hint: {'center_x': 0.5, 'center_y': 0.30}
+            Image:
+                source: './game/resources/collar.jpg'
+				x: self.parent.x + 10
+                center_y: self.parent.center_y
+
+<ToysView>:
+    FloatLayout:
+		orientation: "vertical"
+	#background
+        canvas.before:
+        Image:
+            source: "./game/resources/backgroundorange.png"
+            pos: self.pos
+            size: self.size
+    
+	#cardboard orange
+		Label:
+			text: 'Furrtastic Toys'
+			font_size: 30
+			size_hint: None, None
+			pos_hint: {'center_x': 0.5, 'center_y': 0.85}
+
+        Button:
+            text: "Feline Fling"
+			size: 400, 120
+    		size_hint: None, None
+			pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+            background_color: "#e69825"
+            Image:
+                source: './game/resources/toy_ball.png'
+				x: self.parent.x + 10
+                center_y: self.parent.center_y
+		Button:
+            text: "Cat-in-a-box"
+			size: 400, 120
+    		size_hint: None, None
+			pos_hint: {'center_x': 0.5, 'center_y': 0.45}
+            background_color: "#e69825"
+            Image:
+                source: './game/resources/toy_box.png'
+				x: self.parent.x + 10
+                center_y: self.parent.center_y
+		Button:
+            text: "Rat on a stick"
+			size: 400, 120
+    		size_hint: None, None
+			pos_hint: {'center_x': 0.5, 'center_y': 0.30}
+            background_color: "#e69825"
+            Image:
+                source: './game/resources/toy_rat.png'
+				x: self.parent.x + 10
+                center_y: self.parent.center_y
+				
+
                 
 
 
