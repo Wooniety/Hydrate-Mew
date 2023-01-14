@@ -1,7 +1,7 @@
 from game.cat_view import CatView
 from game.shop_view import ShopView, FoodView
-from game.profile import Profile
 from game.water_view import WaterView
+from game.profile import Profile
 
 import os
 
@@ -23,11 +23,13 @@ class CatApp(App):
         shop_view_screen = ShopView(name='shop')
         water_view_screen = WaterView(name='water')
         profile_view_screen = Profile(name='profile')
+        food_fiew_screen = FoodView(name='food')
 
         self.root.add_widget(cat_view_screen)
         self.root.add_widget(shop_view_screen)
         self.root.add_widget(water_view_screen)
         self.root.add_widget(profile_view_screen)
+        self.root.add_widget(food_fiew_screen)
 
     def _set_aspect_ratio(self):
         Config.set('graphics', 'width', '480')
