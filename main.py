@@ -1,6 +1,5 @@
 from game.cat_view import CatView
-from game.food_view import FoodView
-from game.shop_view import ShopView
+from game.shop_view import ShopView, FoodView
 
 import os
 

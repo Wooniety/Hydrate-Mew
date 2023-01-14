@@ -27,6 +27,36 @@
 			text: "Furniture"
 			on_press: root.manager.current = 'furniture'
 				
+<FoodView>:
+    FloatLayout:
+	
+        orientation: "vertical"
+		Label:
+			text: 'Pawsome Bites'
+			font_size: 30
+			size_hint: None, None
+			pos_hint: {'center_x': 0.5, 'center_y': 0.85}
+        Button:
+            text: "Tuna Temptations"
+			size: 400, 120
+    		size_hint: None, None
+			pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+            Image:
+                source: './game/resources/collar.jpg'
+				x: self.parent.x + 10
+                center_y: self.parent.center_y
+		Button:
+            text: "Kitty Kibbles"
+			size: 400, 120
+    		size_hint: None, None
+			pos_hint: {'center_x': 0.5, 'center_y': 0.45}
+            Image:
+                source: './game/resources/collar.jpg'
+				x: self.parent.x + 10
+                center_y: self.parent.center_y
+                
+
+
 
 
 
