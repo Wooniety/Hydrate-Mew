@@ -1,0 +1,13 @@
+<CatView>:
+    FloatLayout:
+        Label:
+            text: 'This is Cat Game'
+            font_size: 30
+            size_hint: None, None
+            pos_hint: {'center_x': 0.5, 'center_y': 0.7}
+        Button:
+            text: 'Shop'
+            font_size: 20
+            size_hint: None, None
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            on_press: root.open_shop()
