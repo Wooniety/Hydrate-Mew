@@ -1,32 +1,40 @@
 <Profile>:
     FloatLayout:
-    
+
         #background
         canvas.before:
-        Image:
-            source: "./game/resources/backgroundgreen.png"
-            pos: self.pos
-            size: self.size
-        Label:
-            text: 'Welcome,'
-            TextInput(text='', multiline=False)
-            font_size: 60
-            size_hint: None, None
-            
+            Image:
+                source: "./game/resources/backgroundgreen.png"
+                pos: self.pos
+                size: self.size
+            Image:
+                source: "./game/resources/cathappy.jpg"
+                size_hint: 1, 1
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        BoxLayout:
             pos_hint: {'center_x': 0.5, 'center_y': 0.9}
-        Image:
-            source: "./game/resources/cathappy.jpg"
-            size_hint: 1, 1
-            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-        Label:
-            text: 'How much water?'
-            TextInput(text='', multiline=False)
-            font_size: 30
             size_hint: None, None
+            Label:
+                text: 'Welcome,'
+                font_size: 60
+            TextInput:
+                text: ''
+                multiline: False
+        BoxLayout:
             pos_hint: {'center_x': 0.5, 'center_y': 0.15}
-        Label:
-            text: 'How often?'
-            TextInput(text='', multiline=False)
-            font_size: 30
             size_hint: None, None
+            Label:
+                text: 'How much water?'
+                font_size: 30
+            TextInput:
+                text: ''
+                multiline: False
+        BoxLayout:
             pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            size_hint: None, None
+            Label:
+                text: 'How often?'
+                font_size: 30
+            TextInput:
+                text: ''
+                multiline: False
