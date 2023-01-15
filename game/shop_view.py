@@ -11,3 +11,10 @@ class FoodView(Screen):
         super().__init__(**kwargs)
         pass
 
+class ToysView(Screen):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        pass
+
+
+
