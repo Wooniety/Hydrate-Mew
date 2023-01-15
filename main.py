@@ -21,9 +21,10 @@ class CatApp(App):
         return self.root
     
     def bg_music(self):
-        bgm_track = os.path.join(os.path.dirname(__file__), 'resources/bgm.mp3')
+        bgm_track = os.path.join(os.path.dirname(__file__), 'game\\resources\\bgm.mp3')
         self.sound = SoundLoader.load(bgm_track)
         self.sound.loop = True
+        self.sound.volume = 0.05
         self.sound.play()
 
     def screen_manager(self):
@@ -54,6 +55,8 @@ def load_kv_files():
     Builder.load_file(kv_shopview)
     kv_profile = os.path.join(os.path.dirname(__file__), 'kv/profile.kv')
     Builder.load_file(kv_profile)
+    kv_waterview = os.path.join(os.path.dirname(__file__), 'kv/water_view.kv')
+    Builder.load_file(kv_waterview)
 
 if __name__ == '__main__':
     load_kv_files()
