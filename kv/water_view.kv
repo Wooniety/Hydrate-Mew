@@ -19,36 +19,50 @@
                 center_y: self.parent.center_y
 		Label:
 			text: 'Log your water'
+            color: (0.235, 0.227, 0.208, 1)
 			font_size: 30
 			size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.85}
 		Label:
 			id: water_drank
+            color: (0.235, 0.227, 0.208, 1)
 			text: 'Water Consumed: 0'
 			font_size: 30
 			size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.8}
 		Button:
-			text: "Cup - 250ml"
-			size: 200, 440
+			size: 100, 100
     		size_hint: None, None
-			pos_hint: {'center_x': 0.25, 'center_y': 0.5}
+			pos_hint: {'center_x': 0.3, 'center_y': 0.4}
 			on_press: root.drink_cup()
+            Image:
+                source: "./game/resources/cup_full.png"
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
 		Button:
-			text: "Water Bottle - 750ml"
-			size: 200, 440
+			size: 100, 100
     		size_hint: None, None
-			pos_hint: {'center_x': 0.75, 'center_y': 0.5}
+			pos_hint: {'center_x': 0.7, 'center_y': 0.4}
 			on_press: root.drink_bottle()
+            Image:
+                source: "./game/resources/bottle_full.png"
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
 		Button:
-			text: "Undo 750ml"
-			size: 200, 100
+			size: 100, 100
     		size_hint: None, None
-			pos_hint: {'center_x': 0.75, 'center_y': 0.3}
+			pos_hint: {'center_x': 0.7, 'center_y': 0.2}
 			on_press: root.remove_bottle()
+            Image:
+                source: "./game/resources/bottle_empty.png"
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
 		Button:
-			text: "Undo 250ml"
-			size: 200, 100
+			size: 100, 100
     		size_hint: None, None
-			pos_hint: {'center_x': 0.25, 'center_y': 0.3}
+			pos_hint: {'center_x': 0.3, 'center_y': 0.2}
 			on_press: root.remove_cup()
+            Image:
+                source: "./game/resources/cup_empty.png"
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
