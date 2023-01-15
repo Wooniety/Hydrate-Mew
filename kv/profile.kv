@@ -1,16 +1,14 @@
 <Profile>:
     FloatLayout:
+        Image:
+            source: "./game/resources/backgroundblue.png"
+            pos: self.pos
+            size: self.size
 
-        #background
-        canvas.before:
-            Image:
-                source: "./game/resources/backgroundgreen.png"
-                pos: self.pos
-                size: self.size
-            Image:
-                source: "./game/resources/cathappy.jpg"
-                size_hint: 1, 1
-                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        Image:
+            source: "./game/resources/cathappy.jpg"
+            size_hint: 1, 1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
         BoxLayout:
             pos_hint: {'center_x': 0.5, 'center_y': 0.9}
             size_hint: None, None
