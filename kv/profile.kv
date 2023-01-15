@@ -1,0 +1,59 @@
+<Profile>:
+    FloatLayout:
+        #background
+        canvas.before:
+        Image:
+            source: "./game/resources/backgroundgreen.png"
+            pos: self.pos
+            size: self.size
+  
+		Button:
+    		size_hint: None, None
+			pos_hint: {'center_x': 0.1, 'center_y': 0.045}
+			background_color: 0,0,0,0
+			on_press: root.manager.current = 'catview'
+			Image:
+                source: "./game/resources/back.png"
+				size: 70, 70
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        Label:
+            text: 'Bestie Cat'
+			color: "#5C4033"
+			font_name: './game/resources/Vividly-Regular.ttf'
+            font_size: 50
+            size_hint: None, None
+            pos_hint: {'center_x': 0.5, 'center_y': 0.9}
+            
+        Image:
+            source: "./game/resources/cathappy.gif"  
+            background_color: 0,0,0,0
+            size_hint: 1.2, 1.2
+            pos_hint: {'center_x': 0.5, 'center_y': 0.55}
+
+        Label:
+            text: 'How much water do you plan\nto drink a day?'
+			color: "#5C4033"
+			font_name: './game/resources/Vividly-Regular.ttf'
+            font_size: 40
+            size_hint: None, None
+            pos_hint: {'center_x': 0.45, 'center_y': 0.2}
+        
+        Label:
+            text: 'How often?'
+			color: "#5C4033"
+			font_name: './game/resources/Vividly-Regular.ttf'
+            font_size: 40
+            size_hint: None, None
+            pos_hint: {'center_x': 0.2, 'center_y': 0.1}
+
+        TextInput:
+            size_hint: None, None
+            size: 150, 30
+            pos_hint: {'center_x': 0.55, 'center_y': 0.1} 
+        
+        TextInput:
+            size_hint: None, None
+            size: 150, 30
+            pos_hint: {'center_x': 0.65, 'center_y': 0.185} 
