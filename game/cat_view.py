@@ -5,3 +5,4 @@ from kivy.uix.floatlayout import FloatLayout
 class CatView(Screen):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        pass

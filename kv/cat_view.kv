@@ -14,9 +14,10 @@
             pos_hint: {'center_x': 0.5, 'center_y': 0.92}
             
         Image:
-            source: "./game/resources/cathappy.jpg"
-            size_hint: 1, 1
-            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+            source: "./game/resources/cathappy.gif"  
+            background_color: 0,0,0,0
+            size_hint: 1.2, 1.2
+            pos_hint: {'center_x': 0.5, 'center_y': 0.55}
 
         #buttons
         Button:
@@ -24,7 +25,7 @@
             font_size: 20
             size_hint: None, None
             background_color: 0,0,0,0
-            pos_hint: {'x': 0.1, 'y': 0.15}
+            pos_hint: {'x': 0.1, 'y': 0.1}
 
             on_press: root.manager.current = 'shop'
             Image:
@@ -33,13 +34,17 @@
                 center_y: self.parent.center_y
 
         Button:
-            id:cat_button
+            id:setting_button
             font_size: 20
             background_color: 0,0,0,0
             size_hint: None, None
-            pos_hint: {'x': 0.4, 'y': 0.15}
+            pos_hint: {'x': 0.4, 'y': 0.1}
 
+<<<<<<< HEAD
             on_press: root.manager.current = 'profile'
+=======
+            on_press: root.manager.current = 'setting'
+>>>>>>> main
             Image:
                 source: "./game/resources/collar.png"
                 center_x: self.parent.center_x
@@ -50,7 +55,7 @@
             font_size: 20
             background_color: 0,0,0,0
             size_hint: None, None
-            pos_hint: {'x': 0.7, 'y': 0.15}
+            pos_hint: {'x': 0.7, 'y': 0.1}
 
             on_press: root.manager.current = 'water'
             Image:
