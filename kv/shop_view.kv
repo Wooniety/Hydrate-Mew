@@ -28,10 +28,14 @@
 			on_press: root.manager.current = 'toys'
 		Button:
 			text: "Back"
-			size: 90, 70
     		size_hint: None, None
 			pos_hint: {'center_x': 0.085, 'center_y': 0.04}
+			background_color: "#e69825"
 			on_press: root.manager.current = 'catview'
+			Image:
+                source: "./game/resources/back.png"
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
 
 				
 <FoodView>:
@@ -55,7 +59,7 @@
     		size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.6}
             Image:
-                source: './game/resources/collar.jpg'
+                source: './game/resources/food_tuna.png'
 				x: self.parent.x + 10
                 center_y: self.parent.center_y
 		Button:
@@ -64,7 +68,7 @@
     		size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.45}
             Image:
-                source: './game/resources/collar.jpg'
+                source: './game/resources/food_kibble.png'
 				x: self.parent.x + 10
                 center_y: self.parent.center_y
 		Button:
@@ -78,10 +82,14 @@
                 center_y: self.parent.center_y
 		Button:
 			text: "Back"
-			size: 90, 70
     		size_hint: None, None
 			pos_hint: {'center_x': 0.085, 'center_y': 0.04}
+			background_color: "#e69825"
 			on_press: root.manager.current = 'shop'
+			Image:
+                source: "./game/resources/back.png"
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
 
 <ToysView>:
     FloatLayout:
@@ -132,11 +140,14 @@
                 center_y: self.parent.center_y
 		Button:
 			text: "Back"
-			size: 90, 70
     		size_hint: None, None
 			pos_hint: {'center_x': 0.085, 'center_y': 0.04}
 			background_color: "#e69825"
 			on_press: root.manager.current = 'shop'
+			Image:
+                source: "./game/resources/back.png"
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
 				
 
                 
