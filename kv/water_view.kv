@@ -13,7 +13,8 @@
 			size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.85}
 		Label:
-			text: 'Total Water Consumed: '
+			id: water_drank
+			text: 'Water Consumed: 0'
 			font_size: 30
 			size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.8}
@@ -22,18 +23,22 @@
 			size: 200, 440
     		size_hint: None, None
 			pos_hint: {'center_x': 0.25, 'center_y': 0.5}
+			on_press: root.drink_cup()
 		Button:
 			text: "Water Bottle - 750ml"
 			size: 200, 440
     		size_hint: None, None
 			pos_hint: {'center_x': 0.75, 'center_y': 0.5}
+			on_press: root.drink_bottle()
 		Button:
 			text: "Undo 750ml"
 			size: 200, 100
     		size_hint: None, None
 			pos_hint: {'center_x': 0.75, 'center_y': 0.3}
+			on_press: root.remove_bottle()
 		Button:
 			text: "Undo 250ml"
 			size: 200, 100
     		size_hint: None, None
 			pos_hint: {'center_x': 0.25, 'center_y': 0.3}
+			on_press: root.remove_cup()
