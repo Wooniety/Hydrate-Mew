@@ -24,7 +24,7 @@ class CatApp(App):
         bgm_track = os.path.join(os.path.dirname(__file__), 'game\\resources\\bgm.mp3')
         self.sound = SoundLoader.load(bgm_track)
         self.sound.loop = True
-        self.sound.volume = 0.5
+        self.sound.volume = 0.05
         self.sound.play()
 
     def screen_manager(self):
