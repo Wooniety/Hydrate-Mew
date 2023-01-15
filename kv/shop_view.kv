@@ -27,12 +27,15 @@
 			pos_hint: {'center_x': 0.5, 'center_y': 0.45}
 			on_press: root.manager.current = 'toys'
 		Button:
-			id:toys_button
 			text: "Back"
-			size: 100, 120
     		size_hint: None, None
-			pos_hint: {'center_x': 0.1, 'center_y': 0.1}
-			on_press: root.manager.current = 'shop'
+			pos_hint: {'center_x': 0.085, 'center_y': 0.04}
+			background_color: "#e69825"
+			on_press: root.manager.current = 'catview'
+			Image:
+                source: "./game/resources/back.png"
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
 
 				
 <FoodView>:
@@ -56,7 +59,7 @@
     		size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.6}
             Image:
-                source: './game/resources/collar.jpg'
+                source: './game/resources/food_tuna.png'
 				x: self.parent.x + 10
                 center_y: self.parent.center_y
 		Button:
@@ -65,7 +68,7 @@
     		size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.45}
             Image:
-                source: './game/resources/collar.jpg'
+                source: './game/resources/food_kibble.png'
 				x: self.parent.x + 10
                 center_y: self.parent.center_y
 		Button:
@@ -76,6 +79,16 @@
             Image:
                 source: './game/resources/collar.jpg'
 				x: self.parent.x + 10
+                center_y: self.parent.center_y
+		Button:
+			text: "Back"
+    		size_hint: None, None
+			pos_hint: {'center_x': 0.085, 'center_y': 0.04}
+			background_color: "#e69825"
+			on_press: root.manager.current = 'shop'
+			Image:
+                source: "./game/resources/back.png"
+                center_x: self.parent.center_x
                 center_y: self.parent.center_y
 
 <ToysView>:
@@ -124,6 +137,16 @@
             Image:
                 source: './game/resources/toy_rat.png'
 				x: self.parent.x + 10
+                center_y: self.parent.center_y
+		Button:
+			text: "Back"
+    		size_hint: None, None
+			pos_hint: {'center_x': 0.085, 'center_y': 0.04}
+			background_color: "#e69825"
+			on_press: root.manager.current = 'shop'
+			Image:
+                source: "./game/resources/back.png"
+                center_x: self.parent.center_x
                 center_y: self.parent.center_y
 				
 
