@@ -19,19 +19,22 @@
                 center_y: self.parent.center_y
 		Label:
 			text: 'Log your water'
+			font_name: './game/resources/Vividly-Regular.ttf'
             color: (0.235, 0.227, 0.208, 1)
-			font_size: 30
+			font_size: 50
 			size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.85}
 		Label:
 			id: water_drank
+			font_name: './game/resources/Vividly-Regular.ttf'
             color: (0.235, 0.227, 0.208, 1)
 			text: 'Water Consumed: 0'
-			font_size: 30
+			font_size: 55
 			size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.8}
 		Button:
 			size: 100, 100
+			background_color: 0,0,0,0
     		size_hint: None, None
 			pos_hint: {'center_x': 0.3, 'center_y': 0.4}
 			on_press: root.drink_cup()
@@ -41,6 +44,7 @@
                 center_y: self.parent.center_y
 		Button:
 			size: 100, 100
+			background_color: 0,0,0,0
     		size_hint: None, None
 			pos_hint: {'center_x': 0.7, 'center_y': 0.4}
 			on_press: root.drink_bottle()
@@ -50,6 +54,7 @@
                 center_y: self.parent.center_y
 		Button:
 			size: 100, 100
+			background_color: 0,0,0,0
     		size_hint: None, None
 			pos_hint: {'center_x': 0.7, 'center_y': 0.2}
 			on_press: root.remove_bottle()
@@ -59,6 +64,7 @@
                 center_y: self.parent.center_y
 		Button:
 			size: 100, 100
+			background_color: 0,0,0,0
     		size_hint: None, None
 			pos_hint: {'center_x': 0.3, 'center_y': 0.2}
 			on_press: root.remove_cup()
