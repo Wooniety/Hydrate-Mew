@@ -22,6 +22,7 @@
 			size: 400, 120
     		size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+			background_color: "#C86400"
 			on_press: root.manager.current = 'food'
 		Button:
 			id:toys_button
@@ -31,6 +32,7 @@
 			size: 400, 120
     		size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.45}
+			background_color: "#C86400"
 			on_press: root.manager.current = 'toys'
 		Button:
     		size_hint: None, None
@@ -61,35 +63,38 @@
 			font_name: './game/resources/Vividly-Regular.ttf'
 			size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.85}
-        SmoothButton:
+        Button:
             text: "Tuna Temptations"
 			font_size: 35
 			font_name: './game/resources/Vividly-Regular.ttf'
 			size: 400, 120
     		size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+			background_color: "#00008B"
             Image:
                 source: './game/resources/food_tuna.png'
 				x: self.parent.x + 10
                 center_y: self.parent.center_y
-		SmoothButton:
+		Button:
             text: "Kitty Kibbles"
 			font_size: 35
 			font_name: './game/resources/Vividly-Regular.ttf'
 			size: 400, 120
     		size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.45}
+			background_color: "#00008B"
             Image:
                 source: './game/resources/food_kibble.png'
 				x: self.parent.x + 10
                 center_y: self.parent.center_y
-		SmoothButton:
+		Button:
             text: "Feline Fizz"
 			font_size: 35
 			font_name: './game/resources/Vividly-Regular.ttf'
 			size: 400, 120
     		size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.30}
+			background_color: "#00008B"
             Image:
                 source: './game/resources/food_drink.png'
 				x: self.parent.x + 10
@@ -133,7 +138,7 @@
 			size: 400, 120
     		size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.6}
-            background_color: "#e69825"
+            background_color: "#C86400"
             Image:
                 source: './game/resources/toy_ball.png'
 				x: self.parent.x + 10
@@ -145,7 +150,7 @@
 			size: 400, 120
     		size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.45}
-            background_color: "#e69825"
+            background_color: "#C86400"
             Image:
                 source: './game/resources/toy_box.png'
 				x: self.parent.x + 10
@@ -157,7 +162,7 @@
 			size: 400, 120
     		size_hint: None, None
 			pos_hint: {'center_x': 0.5, 'center_y': 0.30}
-            background_color: "#e69825"
+            background_color: "#C86400"
             Image:
                 source: './game/resources/toy_rat.png'
 				x: self.parent.x + 10
@@ -173,19 +178,6 @@
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
 				
-<SmoothButton@Button>:
-	background_color: (0,0,0,0)
-	background_normal: ''
-	back_color: (0,0,1,0)
-    border_radius: [18]
-	canvas.before:
-		Color:
-			rgba: self.back_color
-		RoundedRectangle:
-			size: self.size
-			pos: self.pos
-			radius: self.border_radius
-
 
 
 
