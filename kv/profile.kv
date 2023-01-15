@@ -1,17 +1,56 @@
-<GoalsView>:
+<textinp>:
+	title: 'InputDialog'
+	auto_dismiss: False
+	id: test1
+
+	# Using relative layout to arrange properly
+	RelativeLayout:
+		orientation: 'vertical'
+		pos: self.pos
+		size: root.size
+		id: test2
+
+		# Defining text input in .kv
+		# And giving it the look . pos and features
+		TextInput:
+			id: input
+			hint_text:'Enter cat name'
+			pos_hint: {'center_x': 0.5, 'center_y': 0.705}
+			size_hint: 0.95, 0.5
+			on_text: app.process()
+<Profile>:
+        
     FloatLayout:
+    
+        #background
+        canvas.before:
+        Image:
+            source: "./game/resources/backgroundgreen.png"
+            pos: self.pos
+            size: self.size
         Label:
-            text: 'This is Goals View'
-            font_size: 30
+            text: 'CAT NAME HERE'
+            font_size: 60
             size_hint: None, None
-            pos_hint: {'center_x': 0.5, 'center_y': 0.7}
+            pos_hint: {'center_x': 0.5, 'center_y': 0.9}
         Button:
-            id:shop_button
-            font_size: 20
-            size_hint: None, None
-            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
-            on_press: root.manager.current = 'shop'
+            id:cat_button
+            size_hint: 1, 1  
+            pos_hint: {'x': 0.4, 'y': 0.5}
+
+            on_press: root.manager.current = 'cat_view'
             Image:
-                source: "./game/resources/shop.png"
+                size_hint: 1, 1  
+                source: "./game/resources/cathappy.jpg"
                 center_x: self.parent.center_x
                 center_y: self.parent.center_y
+        Label:
+            text: 'How much water?'
+            font_size: 30
+            size_hint: None, None
+            pos_hint: {'center_x': 0.5, 'center_y': 0.35}
+        Label:
+            text: 'How often?'
+            font_size: 30
+            size_hint: None, None
+            pos_hint: {'center_x': 0.5, 'center_y': 0.3}

@@ -7,6 +7,16 @@
             source: "./game/resources/backgroundblue.png"
             pos: self.pos
             size: self.size
+		Button:
+    		size_hint: None, None
+			pos_hint: {'center_x': 0.1, 'center_y': 0.05}
+			background_color: 0,0,0,0
+			on_press: root.manager.current = 'catview'
+			Image:
+                source: "./game/resources/back.png"
+				size: 70, 70
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
 		Label:
 			text: 'Log your water'
 			font_size: 30
